@@ -7,10 +7,15 @@ html(lang='ru')
         link(rel='stylesheet',href='/css/bootstrap.min.css')
         link(rel='stylesheet',href='/style.css')
     body
-       ul
-         li
-           a(href='/') Домой
-         li
-           a(href='/api/courses') Курсы
+      nav.navbar.navbar-inverse.navbar-fixed-top
+        .container
+          nav.collapse.navbar-collapse
+               ul.nav.navbar-nav
+                 li.active
+                   a(href='/') Домой
+                 li
+                   a(href='/api/courses') Курсы
 
-           block content
+        .container
+          .main-content
+              block content
