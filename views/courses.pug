@@ -1,4 +1,24 @@
 extends layout
 
 block content
+	div#courses
+		span.forP
+			h1 All courses of Academy
+		a.btn.btn-primary(href='/courses/add') Create new course
+		table.table.table-striped
+			thead
+				tr
+					th Id
+					th Courses
+					th
+					th
+			tbody
+				each course in courses
+					tr
+						td= course.id
+						td= course.name
+						td(style='width: 20px;'): a(href='/courses/edit/' + course.id)
+							span.glyphicon.glyphicon-pencil
+						td(style='width: 20px;'): a(href='/courses/delete/' + course.id)
+							span.glyphicon.glyphicon-remove
 

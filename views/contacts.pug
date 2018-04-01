@@ -1,0 +1,12 @@
+extends layout
+
+block content
+	h1 Contact
+	div#form
+		div#contact
+			form(action='/send' method='post')
+				fieldset.form-group
+					input.form-control(name='name', type='text' placeholder='Your name' class='text-control' style='margin-bottom:20px')
+					input.form-control(name='email', type='text' placeholder='Your Email' class='text-control' style='margin-bottom:20px')
+					textarea(name='message', type='text' placeholder='Your massage' class='text-control' style='width:100%;height:70px;')
+				button(type='submit' class='btn btn-primary') Send
