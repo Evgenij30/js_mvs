@@ -58,7 +58,13 @@ app.post('/send', function (req, res) {
 });
 
 
-app.get('/api/courses/add', function (req, res) {
+app.get('/courses/add', function (req, res) {
+    res.render('add');
+});
+app.get('/courses/delete', function (req, res) {
+    res.render('add');
+});
+app.get('/courses/edit', function (req, res) {
     res.render('add');
 });
 app.listen(3000, function () {
